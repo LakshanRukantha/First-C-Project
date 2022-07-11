@@ -3,7 +3,41 @@
 
 int main()
 {
-    int age = 21;
-    printf("My name is Lakshan Rukantha. I am %d years old.", age);
+    printf("======== Simple Calculator ========\n\n");
+
+    char ope;
+    double first, second, ans;
+
+    printf("Enter an operator (+,-,/,*) : ");
+    scanf("%c", &ope);
+    printf("Enter two operands (12,48) : ");
+    scanf("%lf,%lf", &first, &second);
+
+    switch (ope){
+        case '+':
+            printf("\n===================================\n\n");
+            printf("%.2lf + %.2lf = %.2lf", first, second, first + second);
+            printf("\n\n===================================\n");
+            break;
+        case '-':
+            printf("\n===================================\n\n");
+            printf("%.2lf - %.2lf = %.2lf", first, second, first - second);
+            printf("\n\n===================================\n");
+            break;
+        case '/':
+            printf("\n===================================\n\n");
+            printf("%.2lf / %.2lf = %.2lf", first, second, first / second);
+            printf("\n\n===================================\n");
+            break;
+        case '*':
+            printf("\n===================================\n\n");
+            printf("%.2lf * %.2lf = %.2lf", first, second, first * second);
+            printf("\n\n===================================\n");
+            break;
+        default:
+            printf("\n===================================\n\n");
+            printf("Invalid Input!");
+            printf("\n\n===================================\n");
+    }
     return 0;
 }
